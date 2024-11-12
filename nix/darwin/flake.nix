@@ -29,32 +29,39 @@
       environment.systemPackages =
 	[ pkgs.alacritty
 	  pkgs.colorls
+	  pkgs.curl
+	  pkgs.ffmpeg
 	  pkgs.git
 	  pkgs.gh
+	  pkgs.gnupg
+	  pkgs.jq
 	  pkgs.meslo-lgs-nf
           pkgs.mkalias # have nix make aliases instead of symlinks for installed apps
           pkgs.oh-my-zsh
 	  pkgs.neovim
-	  pkgs.zsh-powerlevel10k
+	  pkgs.raycast
           pkgs.tmux
+	  pkgs.zsh-powerlevel10k
         #  pkgs.virtualbox
+	  pkgs.wget
           pkgs.wireshark
         ];
 
       homebrew = {
         enable = true;
-        brews = [
-          "mas" # note: requires xcode-select, which I could not figure out how to install via nix
-        ];
-        casks = [
-          "orbstack"
+	brews = [
+	  "mas" # note: requires xcode-select, which I could not figure out how to install via nix
+	];
+	casks = [
+	  "orbstack"
+	  "orion"
 	  "1password"
 	  "1password-cli"
-        ];
-        masApps = {
+	];
+	masApps = {
 	  "FinalCutPro" = 424389933;
-        };
-        onActivation.cleanup = "zap";
+	};
+	onActivation.cleanup = "zap";
 	onActivation.autoUpdate = true;
 	onActivation.upgrade = true;
       };
@@ -110,10 +117,18 @@
       # MacOS System Defaults
       system.defaults = {
         dock.autohide = true;
+	dock.persistent-apps = [
+          "${pkgs.alacritty}/Applications/Alacritty.app"
+	  "/System/Applications/Calendar.app"
+	];
         dock.mru-spaces = false;
         finder.AppleShowAllExtensions = true;
         finder.FXPreferredViewStyle = "clmv";
+	loginwindow.GuestEnabled = false;
         loginwindow.LoginwindowText = "Bear's MacBook Pro";
+	NSGlobalDomain.AppleICUForce24HourTime = true;
+	NSGlobalDomain.AppleInterfaceStyle = "Dark";
+        NSGlobalDomain.KeyRepeat = 2;
         screencapture.location = "~/Pictures/screenshots";
         screensaver.askForPasswordDelay = 5;
       };
@@ -164,7 +179,7 @@
             # Optional: Enable fully-declarative tap management
             #
             # With mutableTaps disabled, taps can no longer be added imperatively with `brew tap`.
-            # mutableTaps = false;
+            mutableTaps = true;
           };
         }
       ];
