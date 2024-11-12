@@ -6,6 +6,10 @@
     nix-darwin.url = "github:LnL7/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # Optional: Declarative tap management
     homebrew-core = {
@@ -18,7 +22,7 @@
     };
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew, homebrew-core, homebrew-cask }:
+  outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew, homebrew-core, homebrew-cask, home-manager }:
   let
     configuration = { pkgs, config, ... }: {
 
@@ -34,12 +38,14 @@
 	  pkgs.git
 	  pkgs.gh
 	  pkgs.gnupg
+	  pkgs.google-chrome
 	  pkgs.jq
 	  pkgs.meslo-lgs-nf
           pkgs.mkalias # have nix make aliases instead of symlinks for installed apps
           pkgs.oh-my-zsh
 	  pkgs.neovim
 	  pkgs.raycast
+	  pkgs.slack
           pkgs.tmux
 	  pkgs.zsh-powerlevel10k
         #  pkgs.virtualbox
@@ -60,6 +66,7 @@
 	];
 	masApps = {
 	  "FinalCutPro" = 424389933;
+	  "Remarkable" = 1276493162;
 	};
 	onActivation.cleanup = "zap";
 	onActivation.autoUpdate = true;
@@ -114,9 +121,18 @@
       # Enable sudo with touch id
       security.pam.enableSudoTouchIdAuth = true;
 
+      # Configure home-manager
+      users.users.bear.home = "/Users/bear";
+      home-manager.backupFileExtension = "backup";
+      nix.configureBuildUsers = true;
+      nix.useDaemon = true;
+
       # MacOS System Defaults
       system.defaults = {
         dock.autohide = true;
+	dock.autohide-delay = 0.0;
+	dock.autohide-time-modifier = 0.0;
+	dock.orientation = "left";
 	dock.persistent-apps = [
           "${pkgs.alacritty}/Applications/Alacritty.app"
 	  "/System/Applications/Calendar.app"
@@ -132,6 +148,10 @@
         screencapture.location = "~/Pictures/screenshots";
         screensaver.askForPasswordDelay = 5;
       };
+
+      system.keyboard.enableKeyMapping = true;
+
+      system.keyboard.remapCapsLockToEscape = true;
 
       # Allow building and running binaries for x86_64 and aarch64 (enabled by Rosetta 2)
       nix.extraOptions = ''
@@ -182,6 +202,11 @@
             mutableTaps = true;
           };
         }
+	home-manager.darwinModules.home-manager {
+          home-manager.useGlobalPkgs = true;
+	  home-manager.useUserPackages = true;
+	  home-manager.users.bear = import ./home.nix;
+	}
       ];
     };
 
