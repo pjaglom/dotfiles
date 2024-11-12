@@ -27,13 +27,13 @@
       # List packages installed in system profile. To search by name, run:
       # $ nix-env -qaP | grep wget
       environment.systemPackages =
-        [ pkgs.alacritty
+	[ pkgs.alacritty
 	  pkgs.colorls
 	  pkgs.git
 	  pkgs.gh
 	  pkgs.meslo-lgs-nf
           pkgs.mkalias # have nix make aliases instead of symlinks for installed apps
-        #  pkgs.oh-my-zsh
+          pkgs.oh-my-zsh
 	  pkgs.neovim
 	  pkgs.zsh-powerlevel10k
           pkgs.tmux
@@ -48,11 +48,15 @@
         ];
         casks = [
           "orbstack"
+	  "1password"
+	  "1password-cli"
         ];
         masApps = {
 	  "FinalCutPro" = 424389933;
         };
         onActivation.cleanup = "zap";
+	onActivation.autoUpdate = true;
+	onActivation.upgrade = true;
       };
 
       fonts.packages = [
