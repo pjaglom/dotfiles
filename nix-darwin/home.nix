@@ -52,6 +52,7 @@
     #   org.gradle.daemon.idletimeout=3600000
     # '';
     ".zshrc".source = ../zshrc/.zshrc;
+    ".config/alacritty".source = ../alacritty;
     #".config/nvim".source = ../../nvim;
     ".config/nix".source = ../nix;
     ".config/nix-darwin".source = ../nix-darwin;

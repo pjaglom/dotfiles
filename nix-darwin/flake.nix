@@ -123,7 +123,7 @@
 
       # Configure home-manager
       users.users.bear.home = "/Users/bear";
-      home-manager.backupFileExtension = "backup";
+      #home-manager.backupFileExtension = "backup";
       nix.configureBuildUsers = true;
       nix.useDaemon = true;
 
