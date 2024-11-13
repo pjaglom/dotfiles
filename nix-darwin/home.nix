@@ -51,10 +51,10 @@
     #   org.gradle.console=verbose
     #   org.gradle.daemon.idletimeout=3600000
     # '';
-    ".zshrc".source = ~/.dotfiles/zshrc/.zshrc;
-    #".config/nvim".source = ~/.dotfiles/nvim;
-    ".config/nix".source = ~/.dotfiles/nix;
-    ".config/nix-darwin".source = ~/.dotfiles/nix-darwin;
+    ".zshrc".source = ../zshrc/.zshrc;
+    #".config/nvim".source = ../../nvim;
+    ".config/nix".source = ../nix;
+    ".config/nix-darwin".source = ../nix-darwin;
     #".config/tmux".source = ~/.dotfiles/tmux;
   };
 
