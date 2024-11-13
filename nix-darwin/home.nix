@@ -13,6 +13,8 @@
   # You should not change this value, even if you update Home Manager. If you do
   # want to update the value, then make sure to first check the Home Manager
   # release notes.
+  home.username = "bear";
+  home.homeDirectory = "/Users/bear";
   home.stateVersion = "23.05"; # Please read the comment before changing.
 
   # The home.packages option allows you to install Nix packages into your
@@ -49,6 +51,11 @@
     #   org.gradle.console=verbose
     #   org.gradle.daemon.idletimeout=3600000
     # '';
+    ".zshrc".source = ~/.dotfiles/zshrc/.zshrc;
+    #".config/nvim".source = ~/.dotfiles/nvim;
+    ".config/nix".source = ~/.dotfiles/nix;
+    ".config/nix-darwin".source = ~/.dotfiles/nix-darwin;
+    #".config/tmux".source = ~/.dotfiles/tmux;
   };
 
   # You can also manage environment variables but you will have to manually
@@ -64,6 +71,12 @@
   home.sessionVariables = {
     # EDITOR = "emacs";
   };
+
+# Not entirely sure what this does. Need to investigate. Source: https://github.com/omerxx/dotfiles/blob/master/nix-darwin/home.nix
+#  home.sessionPath = [
+#    "/run/current-system/sw/bin"
+#      "$HOME/.nix-profile/bin"
+#  ];
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
