@@ -40,7 +40,6 @@
 	  pkgs.gnupg
 	  pkgs.google-chrome
 	  pkgs.jq
-	  pkgs.meslo-lgs-nf
           pkgs.mkalias # have nix make aliases instead of symlinks for installed apps
           pkgs.oh-my-zsh
 	  pkgs.neovim
@@ -75,6 +74,7 @@
 
       fonts.packages = [
         (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+        pkgs.meslo-lgs-nf
         ];
 
       # Enable powerlevel10k for zsh
