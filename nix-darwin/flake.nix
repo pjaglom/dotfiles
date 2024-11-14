@@ -69,6 +69,7 @@
 	  "FinalCutPro" = 424389933;
           "Kindle" = 302584613;
 	  "Remarkable" = 1276493162;
+          "Yubico Authenticator" = 1476679808;
 	};
 	onActivation.cleanup = "zap";
 	onActivation.autoUpdate = true;
