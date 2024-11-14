@@ -138,6 +138,7 @@
 	dock.persistent-apps = [
           "${pkgs.alacritty}/Applications/Alacritty.app"
 	  "/System/Applications/Calendar.app"
+          "/System/Applications/System Settings.app"
 	];
         dock.mru-spaces = false;
         finder.AppleShowAllExtensions = true;
@@ -146,8 +147,8 @@
         loginwindow.LoginwindowText = "Bear's MacBook Pro";
 	NSGlobalDomain.AppleICUForce24HourTime = true;
 	NSGlobalDomain.AppleInterfaceStyle = "Dark";
-        NSGlobalDomain.InitialKeyRepeat = 5;
-        NSGlobalDomain.KeyRepeat = 1;
+        NSGlobalDomain.InitialKeyRepeat = 2;
+        NSGlobalDomain.KeyRepeat = 0;
         screencapture.location = "~/Pictures/screenshots";
         screensaver.askForPasswordDelay = 5;
       };
