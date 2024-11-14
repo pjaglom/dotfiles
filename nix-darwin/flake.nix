@@ -151,6 +151,10 @@
 	NSGlobalDomain.AppleInterfaceStyle = "Dark";
         NSGlobalDomain.InitialKeyRepeat = 2;
         NSGlobalDomain.KeyRepeat = 0;
+        NSGlobalDomain.NSAutomaticCapitalizationEnabled = false;
+        NSGlobalDomain.NSAutomaticInlinePredictionEnabled = false;
+        NSGlobalDomain.NSAutomaticPeriodSubstitutionEnabled = false;
+        NSGlobalDomain.NSAutomaticSpellingCorrectionEnabled = false;
         screencapture.location = "~/Pictures/screenshots";
         screensaver.askForPasswordDelay = 5;
       };
