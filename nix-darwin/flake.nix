@@ -144,7 +144,7 @@
         loginwindow.LoginwindowText = "Bear's MacBook Pro";
 	NSGlobalDomain.AppleICUForce24HourTime = true;
 	NSGlobalDomain.AppleInterfaceStyle = "Dark";
-        NSGlobalDomain.KeyRepeat = 2;
+  ####  NSGlobalDomain.KeyRepeat = 5;
         screencapture.location = "~/Pictures/screenshots";
         screensaver.askForPasswordDelay = 5;
       };
