@@ -32,6 +32,7 @@
       # $ nix-env -qaP | grep wget
       environment.systemPackages =
 	[ pkgs.alacritty
+          pkgs.atuin
 	  pkgs.colorls
 	  pkgs.curl
 	  pkgs.ffmpeg
