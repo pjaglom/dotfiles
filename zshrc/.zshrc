@@ -141,7 +141,7 @@ alias switch="darwin-rebuild switch --flake ~/dotfiles/nix-darwin#macbookpro-202
 #    local directory="${1:-$(pwd)}"
 #    docker run -it --rm --privileged -v "$directory:/prog" docker-debugger:latest
 #}
-#eval "$(atuin init zsh)"
+eval "$(atuin init zsh)"
 #source ~/.iterm2_shell_integration.zsh
 
 #export PYENV_ROOT="$HOME/.pyenv"
