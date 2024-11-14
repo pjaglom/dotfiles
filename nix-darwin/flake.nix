@@ -58,10 +58,11 @@
 	  "mas" # note: requires xcode-select, which I could not figure out how to install via nix
 	];
 	casks = [
+          "1password"
+          "1password-cli"
+          "microsoft-office"
 	  "orbstack"
 	  "orion"
-	  "1password"
-	  "1password-cli"
 	];
 	masApps = {
 	  "FinalCutPro" = 424389933;
@@ -144,8 +145,8 @@
         loginwindow.LoginwindowText = "Bear's MacBook Pro";
 	NSGlobalDomain.AppleICUForce24HourTime = true;
 	NSGlobalDomain.AppleInterfaceStyle = "Dark";
-        NSGlobalDomain.InitialKeyRepeat = 10;
-        NSGlobalDomain.KeyRepeat = 9;
+        NSGlobalDomain.InitialKeyRepeat = 5;
+        NSGlobalDomain.KeyRepeat = 1;
         screencapture.location = "~/Pictures/screenshots";
         screensaver.askForPasswordDelay = 5;
       };
