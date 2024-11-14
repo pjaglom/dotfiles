@@ -45,6 +45,7 @@
           pkgs.oh-my-zsh
 	  pkgs.neovim
 	  pkgs.raycast
+          pkgs.signal-desktop
 	  pkgs.slack
           pkgs.tmux
 	  pkgs.zsh-powerlevel10k
