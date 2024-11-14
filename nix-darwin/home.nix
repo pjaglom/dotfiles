@@ -53,7 +53,7 @@
     # '';
     ".zshrc".source = ../zshrc/.zshrc;
     ".config/alacritty".source = ../alacritty;
-    #".config/nvim".source = ../../nvim;
+    ".config/nvim".source = ../nvim;
     ".config/nix".source = ../nix;
     ".config/nix-darwin".source = ../nix-darwin;
     #".config/tmux".source = ~/.dotfiles/tmux;
