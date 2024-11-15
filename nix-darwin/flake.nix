@@ -148,6 +148,7 @@
         finder.FXPreferredViewStyle = "clmv";
 	loginwindow.GuestEnabled = false;
         loginwindow.LoginwindowText = "Bear's MacBook Pro";
+        NSGlobalDomain."com.apple.trackpad.enableSecondaryClick" = true;
 	NSGlobalDomain.AppleICUForce24HourTime = true;
 	NSGlobalDomain.AppleInterfaceStyle = "Dark";
         NSGlobalDomain.InitialKeyRepeat = 2;
