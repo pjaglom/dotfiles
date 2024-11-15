@@ -35,6 +35,7 @@
           pkgs.atuin
 	  pkgs.colorls
 	  pkgs.curl
+          pkgs.discord
 	  pkgs.ffmpeg
 	  pkgs.git
 	  pkgs.gh
