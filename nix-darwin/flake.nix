@@ -66,6 +66,7 @@
           "microsoft-office"
 	  "orbstack"
 	  "orion"
+          "visual-studio-code@insiders"
 	];
 	masApps = {
 	  "FinalCutPro" = 424389933;
