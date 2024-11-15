@@ -149,17 +149,21 @@
 	loginwindow.GuestEnabled = false;
         loginwindow.LoginwindowText = "Bear's MacBook Pro";
         magicmouse.MouseButtonMode = "TwoButton";
-        trackpad.TrackpadRightClick = true;
-	NSGlobalDomain.AppleICUForce24HourTime = true;
-	NSGlobalDomain.AppleInterfaceStyle = "Dark";
-        NSGlobalDomain.InitialKeyRepeat = 2;
-        NSGlobalDomain.KeyRepeat = 0;
-        NSGlobalDomain.NSAutomaticCapitalizationEnabled = false;
-        NSGlobalDomain.NSAutomaticInlinePredictionEnabled = false;
-        NSGlobalDomain.NSAutomaticPeriodSubstitutionEnabled = false;
-        NSGlobalDomain.NSAutomaticSpellingCorrectionEnabled = false;
+        NSGlobalDomain = {
+        "com.apple.trackpad.trackpadCornerClickBehavior" = 1;
+        "com.apple.trackpad.enableSecondaryClick" = true;
+	AppleICUForce24HourTime = true;
+	AppleInterfaceStyle = "Dark";
+        InitialKeyRepeat = 2;
+        KeyRepeat = 0;
+        NSAutomaticCapitalizationEnabled = false;
+        NSAutomaticInlinePredictionEnabled = false;
+        NSAutomaticPeriodSubstitutionEnabled = false;
+        NSAutomaticSpellingCorrectionEnabled = false;
+        };
         screencapture.location = "~/Pictures/screenshots";
         screensaver.askForPasswordDelay = 5;
+        trackpad.TrackpadRightClick = true;
       };
 
       system.keyboard.enableKeyMapping = true;
