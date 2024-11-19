@@ -52,6 +52,7 @@
         #  pkgs.virtualbox
 	  pkgs.wget
           pkgs.wireshark
+          pkgs.zoom-us
           pkgs.zsh-powerlevel10k
         ];
 
