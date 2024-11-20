@@ -65,6 +65,7 @@
           "1password"
           "1password-cli"
           "microsoft-office"
+          "microsoft-teams"
 	  "orbstack"
 	  "orion"
           "visual-studio-code@insiders"
