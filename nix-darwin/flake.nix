@@ -48,7 +48,6 @@
 	  pkgs.raycast
           pkgs.signal-desktop
 	  pkgs.slack
-          pkgs.tailscale
           pkgs.tmux
         #  pkgs.virtualbox
 	  pkgs.wget
@@ -61,6 +60,7 @@
         enable = true;
 	brews = [
 	  "mas" # note: requires xcode-select, which I could not figure out how to install via nix
+          "tailscale"
 	];
 	casks = [
           "1password"
