@@ -150,6 +150,12 @@
           "${pkgs.alacritty}/Applications/Alacritty.app"
 	  "/System/Applications/Calendar.app"
           "/System/Applications/System Settings.app"
+          "/Applications/1Password.app/"
+          "/Applications/Safari.app/"
+          "/System/Applications/Messages.app/"
+          "/Applications/Nix Apps/Google Chrome.app"
+          "/Applications/Nix Apps/Slack.app"
+          "/Applications/Nix Apps/Signal.app"
 	];
         dock.mru-spaces = false;
         finder.AppleShowAllExtensions = true;
