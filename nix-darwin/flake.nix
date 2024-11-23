@@ -48,6 +48,7 @@
 	  pkgs.raycast
           pkgs.signal-desktop
 	  pkgs.slack
+          pkgs.tailscale
           pkgs.tmux
         #  pkgs.virtualbox
 	  pkgs.wget
