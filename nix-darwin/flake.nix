@@ -48,6 +48,7 @@
 	  pkgs.raycast
           pkgs.signal-desktop
 	  pkgs.slack
+          pkgs.tailscale
           pkgs.tmux
         #  pkgs.virtualbox
 	  pkgs.wget
@@ -60,7 +61,6 @@
         enable = true;
 	brews = [
 	  "mas" # note: requires xcode-select, which I could not figure out how to install via nix
-          "tailscale"
 	];
 	casks = [
           "1password"
@@ -122,6 +122,8 @@
       # programs.fish.enable = true;
       programs.zsh.enable = true;
 
+      # Enable tailscale
+      services.tailscale.enable = true;
       # Enable oh-my-zsh
       #oh-my-zsh = {
       #  enable = true;
