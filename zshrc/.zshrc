@@ -135,7 +135,7 @@ alias ols='ls'
 alias copilot="gh copilot"
 alias gcs="gh copilot suggest"
 alias gce="gh copilot explain"
-alias update-switch="nix flake update --commit-lock-file && darwin-rebuild switch --flake ~/dotfiles/nix-darwin#macbookpro-2024"
+alias update-switch="nix flake update --commit-lock-file && darwin-rebuild switch --flake ~/config-files/dotfiles/nix-darwin#macbookpro-2024"
 alias switch="darwin-rebuild switch --flake ~/config-files/dotfiles/nix-darwin#macbookpro-2024"
 #debug() {
 #    local directory="${1:-$(pwd)}"
