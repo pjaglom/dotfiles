@@ -157,7 +157,7 @@
           "/Applications/Nix Apps/Slack.app"
           "/Applications/Nix Apps/Signal.app"
 	];
-        dock.mru-spaces = false;
+        #dock.mru-spaces = false; # commented due to not working right
         finder.AppleShowAllExtensions = true;
         finder.FXPreferredViewStyle = "clmv";
 	loginwindow.GuestEnabled = false;
@@ -168,8 +168,8 @@
         "com.apple.trackpad.enableSecondaryClick" = true;
 	AppleICUForce24HourTime = true;
 	AppleInterfaceStyle = "Dark";
-        InitialKeyRepeat = 2;
-        KeyRepeat = 0;
+        #InitialKeyRepeat = 2; # commented due to not working right
+        #KeyRepeat = 0; # commented due to not working right
         NSAutomaticCapitalizationEnabled = false;
         NSAutomaticInlinePredictionEnabled = false;
         NSAutomaticPeriodSubstitutionEnabled = false;
