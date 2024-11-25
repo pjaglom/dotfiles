@@ -51,7 +51,7 @@
     #   org.gradle.console=verbose
     #   org.gradle.daemon.idletimeout=3600000
     # '';
-    ".zshrc".source = ../zshrc/.zshrc;
+    #".zshrc".source = ../zshrc/.zshrc;
     ".config/alacritty".source = ../alacritty;
     ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "/Users/bear/config-files/nvim";
     ".config/nix".source = ../nix;
@@ -70,7 +70,7 @@
   #
   # if you don't want to manage your shell through Home Manager.
   home.sessionVariables = {
-    # EDITOR = "emacs";
+    EDITOR = "nvim";
   };
 
 # Not entirely sure what this does. Need to investigate. Source: https://github.com/omerxx/dotfiles/blob/master/nix-darwin/home.nix
@@ -78,7 +78,42 @@
 #    "/run/current-system/sw/bin"
 #      "$HOME/.nix-profile/bin"
 #  ];
-
+  # atuin options
+  programs.atuin = {
+    enable = true;
+    enableZshIntegration = true;
+  };
+  # zsh options
+  programs.zsh = {
+    enable = true;
+    oh-my-zsh = {
+      enable = true;
+      plugins = [
+        "git"
+        "sudo"
+        "z"
+        "web-search"
+        "macos"
+        "copypath"
+        "copyfile"
+        "copybuffer"
+        "dirhistory"
+        "zsh-autosuggestions"
+        "zsh-syntax-highlighting"
+      ];
+      shellAliases = {
+        vi="nvim";
+        ls="colorls -la";
+        ols="ls";
+        copilot="gh copilot";
+        gcs="gh copilot suggest";
+        gce="gh copilot explain";
+        update-switch="nix flake update --commit-lock-file && darwin-rebuild switch --flake ~/config-files/dotfiles/nix-darwin#macbookpro-2024";
+        switch="darwin-rebuild switch --flake ~/config-files/dotfiles/nix-darwin#macbookpro-2024";
+      };
+      theme = "powerlevel10k/powerlevel10k";
+    };
+  };
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }
