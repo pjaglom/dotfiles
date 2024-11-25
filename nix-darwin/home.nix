@@ -101,18 +101,18 @@
         "zsh-autosuggestions"
         "zsh-syntax-highlighting"
       ];
-      shellAliases = {
-        vi="nvim";
-        ls="colorls -la";
-        ols="ls";
-        copilot="gh copilot";
-        gcs="gh copilot suggest";
-        gce="gh copilot explain";
-        update-switch="nix flake update --commit-lock-file && darwin-rebuild switch --flake ~/config-files/dotfiles/nix-darwin#macbookpro-2024";
-        switch="darwin-rebuild switch --flake ~/config-files/dotfiles/nix-darwin#macbookpro-2024";
-      };
-      theme = "powerlevel10k/powerlevel10k";
     };
+    shellAliases = {
+      vi="nvim";
+      ls="colorls -la";
+      ols="ls";
+      copilot="gh copilot";
+      gcs="gh copilot suggest";
+      gce="gh copilot explain";
+      update-switch="nix flake update --commit-lock-file && darwin-rebuild switch --flake ~/config-files/dotfiles/nix-darwin#macbookpro-2024";
+      switch="darwin-rebuild switch --flake ~/config-files/dotfiles/nix-darwin#macbookpro-2024";
+    };
+      theme = "powerlevel10k/powerlevel10k";
   };
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
