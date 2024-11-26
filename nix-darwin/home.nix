@@ -93,9 +93,9 @@
   # zsh options
   programs.zsh = {
     enable = true;
-    #initExtra = ''
-    #  [[ ! -f ${./p10k.zsh} ]] || source ${../p10k/p10k.zsh}
-    #'';
+    initExtra = ''
+      bindkey -v
+    '';
     syntaxHighlighting.enable = true;
     autosuggestion.enable = true;
     plugins = [
