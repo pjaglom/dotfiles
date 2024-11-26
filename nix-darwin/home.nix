@@ -100,8 +100,6 @@
         "copyfile"
         "copybuffer"
         "dirhistory"
-        "zsh-autosuggestions"
-        "zsh-syntax-highlighting"
       ];
     };
     shellAliases = {
