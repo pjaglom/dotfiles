@@ -54,7 +54,9 @@
 	  pkgs.wget
           pkgs.wireshark
           pkgs.zoom-us
+          pkgs.zsh-autosuggestions
           pkgs.zsh-powerlevel10k
+          pkgs.zsh-syntax-highlighting
         ];
 
       homebrew = {
