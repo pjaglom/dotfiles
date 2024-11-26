@@ -57,6 +57,13 @@
     ".config/nix".source = ../nix;
     ".config/nix-darwin".source = ../nix-darwin;
     #".config/tmux".source = ~/.dotfiles/tmux;
+    # Add keybindings for home and end buttons on Magic Keyboard
+    "Library/KeyBindings/DefaultKeyBinding.dict".text = ''
+    {
+      "\UF729" = moveToBeginningOfLine:; // Home
+      "\UF72B" = moveToEndOfLine:; // End
+    }
+    '';
   };
 
   # You can also manage environment variables but you will have to manually
