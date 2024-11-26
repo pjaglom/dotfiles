@@ -170,8 +170,8 @@
         "com.apple.trackpad.enableSecondaryClick" = true;
 	AppleICUForce24HourTime = true;
 	AppleInterfaceStyle = "Dark";
-        #InitialKeyRepeat = 2; # commented due to not working right
-        #KeyRepeat = 0; # commented due to not working right
+        InitialKeyRepeat = 15; # commented due to not working right
+        KeyRepeat = 2; # commented due to not working right
         NSAutomaticCapitalizationEnabled = false;
         NSAutomaticInlinePredictionEnabled = false;
         NSAutomaticPeriodSubstitutionEnabled = false;
