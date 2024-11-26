@@ -86,6 +86,9 @@
   # zsh options
   programs.zsh = {
     enable = true;
+    initExtra = ''
+      [[ ! -f ${./p10k.zsh;} ]] || source ${./p10k.zsh}
+    '';
     syntaxHighlighting.enable = true;
     autosuggestion.enable = true;
     oh-my-zsh = {
@@ -107,7 +110,7 @@
         }
         {
           name = "powerlevel10k-config";
-          src = lib.cleanSource ./p10k-config;
+          src = ../p10k;
           file = "p10k.zsh";
         }
       ];
