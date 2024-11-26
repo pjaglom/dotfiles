@@ -87,7 +87,7 @@
   programs.zsh = {
     enable = true;
     initExtra = ''
-      [[ ! -f ${./p10k.zsh} ]] || source ${./p10k.zsh}
+      [[ ! -f ${./p10k.zsh} ]] || source ${../p10k/p10k.zsh}
     '';
     syntaxHighlighting.enable = true;
     autosuggestion.enable = true;
