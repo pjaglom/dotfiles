@@ -161,10 +161,11 @@
           "/Applications/Nix Apps/Slack.app"
           "/Applications/Nix Apps/Signal.app"
 	];
-        dock.persistent-others = [
-          "~/Documents"
-          "~/Downloads"
-        ];
+        # Commented out because didn't work well
+          #dock.persistent-others = [
+          #  "~/Documents"
+          #  "~/Downloads"
+          #];
         #dock.mru-spaces = false; # commented due to not working right
         finder.AppleShowAllExtensions = true;
         finder.FXEnableExtensionChangeWarning = false;
