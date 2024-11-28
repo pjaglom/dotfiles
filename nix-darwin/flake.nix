@@ -147,6 +147,8 @@
         dock.autohide = true;
 	dock.autohide-delay = 0.0;
 	dock.autohide-time-modifier = 0.0;
+        dock.mineffect = "scale";
+        dock.minimize-to-application = true;
 	dock.orientation = "left";
 	dock.persistent-apps = [
           "${pkgs.alacritty}/Applications/Alacritty.app"
@@ -159,9 +161,18 @@
           "/Applications/Nix Apps/Slack.app"
           "/Applications/Nix Apps/Signal.app"
 	];
+        dock.persistent-others = [
+          "~/Documents"
+          "~/Downloads"
+        ];
         #dock.mru-spaces = false; # commented due to not working right
         finder.AppleShowAllExtensions = true;
+        finder.FXEnableExtensionChangeWarning = false;
         finder.FXPreferredViewStyle = "clmv";
+        finder.ShowPathbar = true;
+        finder.ShowStatusBar = true;
+        finder._FXShowPosixPathInTitle = true;
+        finder._FXSortFoldersFirst = true;
 	loginwindow.GuestEnabled = false;
         loginwindow.LoginwindowText = "Bear's MacBook Pro";
         magicmouse.MouseButtonMode = "TwoButton";
