@@ -68,6 +68,7 @@
           "1password"
           "1password-cli"
           "adobe-acrobat-pro"
+          "anki"
           "microsoft-office"
           "microsoft-teams"
 	  "orbstack"
@@ -78,7 +79,8 @@
 	  "FinalCutPro" = 424389933;
           "Kindle" = 302584613;
 	  "Remarkable" = 1276493162;
-          "Yubico Authenticator" = 1476679808;
+          "Things 3" = 904280696;
+          "Yubico Authenticator" = 1497506650; # Never successfully installed; installed manually
 	};
 	onActivation.cleanup = "zap";
 	onActivation.autoUpdate = true;
