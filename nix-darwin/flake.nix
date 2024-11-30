@@ -159,9 +159,10 @@
           "/Applications/1Password.app/"
           "/Applications/Safari.app/"
           "/System/Applications/Messages.app/"
-          "/Applications/Nix Apps/Google Chrome.app"
-          "/Applications/Nix Apps/Slack.app"
-          "/Applications/Nix Apps/Signal.app"
+          # Apps in Nix Apps folder don't play well in dock
+          #"/Applications/Nix Apps/Google Chrome.app"
+          #"/Applications/Nix Apps/Slack.app"
+          #"/Applications/Nix Apps/Signal.app"
 	];
         # Commented out because didn't work well
           #dock.persistent-others = [
