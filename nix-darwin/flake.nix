@@ -157,6 +157,7 @@
 	  "/System/Applications/Calendar.app"
           "/System/Applications/System Settings.app"
           "/Applications/1Password.app/"
+          "/Applications/Orion.app/"
           "/Applications/Safari.app/"
           "/System/Applications/Messages.app/"
           # Apps in Nix Apps folder don't play well in dock
