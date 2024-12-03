@@ -74,6 +74,7 @@
 	  "orbstack"
 	  "orion"
           "visual-studio-code@insiders"
+          "whatsapp"
 	];
 	masApps = {
 	  "FinalCutPro" = 424389933;
