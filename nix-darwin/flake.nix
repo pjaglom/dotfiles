@@ -89,7 +89,7 @@
       };
 
       fonts.packages = [
-        pkgs.nerd-fonts.meslo-lgs-nf
+        pkgs.meslo-lgs-nf
         pkgs.nerd-fonts.jet_brains_mono
         ];
 
