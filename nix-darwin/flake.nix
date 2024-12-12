@@ -89,8 +89,8 @@
       };
 
       fonts.packages = [
-        (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
-        pkgs.meslo-lgs-nf
+        pkgs.nerd-fonts.meslo-lgs-nf
+        pkgs.nerd-fonts.jet_brains_mono
         ];
 
       # Enable powerlevel10k for zsh
