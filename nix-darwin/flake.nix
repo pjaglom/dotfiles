@@ -90,7 +90,7 @@
 
       fonts.packages = [
         pkgs.meslo-lgs-nf
-        pkgs.nerd-fonts.jet_brains_mono
+        pkgs.nerd-fonts.jetbrains-mono
         ];
 
       # Enable powerlevel10k for zsh
