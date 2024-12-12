@@ -52,7 +52,7 @@
           pkgs.tmux
         #  pkgs.virtualbox
 	  pkgs.wget
-          pkgs.wireshark
+        #  pkgs.wireshark
           pkgs.zoom-us
           pkgs.zsh-autosuggestions
           pkgs.zsh-powerlevel10k
