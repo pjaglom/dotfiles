@@ -63,7 +63,6 @@
         enable = true;
 	brews = [
 	  "mas" # note: requires xcode-select, which I could not figure out how to install via nix
-          "tailscale"
 	];
 	casks = [
           "1password"
@@ -74,6 +73,7 @@
           "microsoft-teams"
 	  "orbstack"
 	  "orion"
+          "tailscale"
           "visual-studio-code@insiders"
           "whatsapp"
 	];
