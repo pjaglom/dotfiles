@@ -129,7 +129,7 @@
       programs.zsh.enable = true;
 
       # Enable tailscale
-      services.tailscale.enable = true;
+        #services.tailscale.enable = true;
       # Enable oh-my-zsh
       #oh-my-zsh = {
       #  enable = true;
