@@ -73,7 +73,7 @@
           "microsoft-teams"
 	  "orbstack"
 	  "orion"
-            #"tailscale"
+          "tailscale"
           "visual-studio-code@insiders"
           "whatsapp"
 	];
