@@ -45,6 +45,7 @@
           pkgs.libfido2
           pkgs.mkalias # have nix make aliases instead of symlinks for installed apps
           pkgs.oh-my-zsh
+          pkgs.openssh
 	  pkgs.neovim
 	  pkgs.raycast
           pkgs.signal-desktop
