@@ -131,6 +131,13 @@
       # programs.fish.enable = true;
       programs.zsh.enable = true;
 
+      # Add Nix OpenSSH to the PATH
+      shell = {
+        shellInit = ''
+          export PATH="/run/current-system/sw/bin:$PATH"
+        '';
+      };
+
       # Enable tailscale
         #services.tailscale.enable = true;
       # Enable oh-my-zsh
