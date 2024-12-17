@@ -42,6 +42,7 @@
 	  pkgs.gnupg
 	  pkgs.google-chrome
 	  pkgs.jq
+          pkgs.libfido2
           pkgs.mkalias # have nix make aliases instead of symlinks for installed apps
           pkgs.oh-my-zsh
 	  pkgs.neovim
@@ -53,6 +54,7 @@
         #  pkgs.virtualbox
 	  pkgs.wget
           pkgs.wireshark
+          pkgs.yubikey-manager
           pkgs.zoom-us
           pkgs.zsh-autosuggestions
           pkgs.zsh-powerlevel10k
