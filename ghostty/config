@@ -35,3 +35,5 @@ font-family-bold = MesloLGS NF
 font-family-italic = MesloLGS NF
 font-family-bold-italic = MesloLGS NF
 font-size = 15
+window-height = 34
+window-width = 89
