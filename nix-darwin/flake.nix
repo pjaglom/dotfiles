@@ -65,6 +65,7 @@
       homebrew = {
         enable = true;
 	brews = [
+          "ghostty"
 	  "mas" # note: requires xcode-select, which I could not figure out how to install via nix
 	];
 	casks = [
@@ -132,11 +133,11 @@
       programs.zsh.enable = true;
 
       # Add Nix OpenSSH to the PATH
-      shell = {
-        shellInit = ''
-          export PATH="/run/current-system/sw/bin:$PATH"
-        '';
-      };
+        #shell = {
+        #  shellInit = ''
+        #    export PATH="/run/current-system/sw/bin:$PATH"
+        #  '';
+        #};
 
       # Enable tailscale
         #services.tailscale.enable = true;
