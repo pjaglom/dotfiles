@@ -133,9 +133,11 @@
       programs.zsh.enable = true;
 
       # Add Nix OpenSSH to the PATH
-      shellInit = ''
-        export PATH="/run/current-system/sw/bin:$PATH"
-      '';
+      environment = {
+        shellInit = ''
+          export PATH="/run/current-system/sw/bin:$PATH"
+        '';
+      };
 
       # Enable tailscale
         #services.tailscale.enable = true;
@@ -267,6 +269,18 @@
 	  home-manager.useUserPackages = true;
 	  home-manager.users.bear = import ./home.nix;
 	}
+          # Add overlay for libgit2
+        ({ pkgs, ... }: {
+          nixpkgs.overlays = [
+            (self: super: {
+              libgit2 = super.libgit2.overrideAttrs (oldAttrs: {
+                CFLAGS = "${oldAttrs.CFLAGS or ""} -Wno-error";
+                CXXFLAGS = "${oldAttrs.CXXFLAGS or ""} -Wno-error";
+                cmakeFlags = (oldAttrs.cmakeFlags or []) ++ [ "-DUSE_BUNDLED_ZLIB=OFF" ];
+              });
+            })
+          ];
+        })
       ];
     };
 
