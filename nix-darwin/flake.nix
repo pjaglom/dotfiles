@@ -269,14 +269,20 @@
 	  home-manager.useUserPackages = true;
 	  home-manager.users.bear = import ./home.nix;
 	}
-          # Add overlay for libgit2
+        # Add overlay for libgit2
         ({ pkgs, ... }: {
           nixpkgs.overlays = [
             (self: super: {
-              libgit2 = super.libgit2.overrideAttrs (oldAttrs: {
-                CFLAGS = "${oldAttrs.CFLAGS or ""} -Wno-error";
-                CXXFLAGS = "${oldAttrs.CXXFLAGS or ""} -Wno-error";
-                cmakeFlags = (oldAttrs.cmakeFlags or []) ++ [ "-DUSE_BUNDLED_ZLIB=OFF" ];
+              libgit2 = super.libgit2.overrideAttrs (oldAttrs: rec {
+                buildInputs = (oldAttrs.buildInputs or []) ++ [ super.zlib super.libssh2 super.pcre2 ];
+                cmakeFlags = (oldAttrs.cmakeFlags or []) ++ [
+                  "-DUSE_BUNDLED_ZLIB=OFF"
+                  "-DUSE_HTTP_PARSER=system"
+                  "-DUSE_SSH=ON"
+                  "-DREGEX_BACKEND=pcre2"
+                ];
+                CFLAGS = "${oldAttrs.CFLAGS or ""} -Wno-error=deprecated-non-prototype -Wno-error=macro-redefined";
+                CXXFLAGS = "${oldAttrs.CXXFLAGS or ""} -Wno-error=deprecated-non-prototype -Wno-error=macro-redefined";
               });
             })
           ];
