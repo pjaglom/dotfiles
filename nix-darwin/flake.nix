@@ -58,7 +58,7 @@
           pkgs.yubikey-manager
           pkgs.zoom-us
           pkgs.zsh-autosuggestions
-          pkgs.zsh-powerlevel10k
+         #pkgs.zsh-powerlevel10k
           pkgs.zsh-syntax-highlighting
         ];
 
@@ -99,7 +99,7 @@
         ];
 
       # Enable powerlevel10k for zsh
-      programs.zsh.promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
+      #programs.zsh.promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
       # script from https://gist.github.com/elliottminns/211ef645ebd484eb9a5228570bb60ec3#file-nix-darwin-activation-nix to set up aliases instead of symlinks
       system.activationScripts.applications.text = let
         env = pkgs.buildEnv {
@@ -269,24 +269,24 @@
 	  home-manager.useUserPackages = true;
 	  home-manager.users.bear = import ./home.nix;
 	}
-        # Add overlay for libgit2
-        ({ pkgs, ... }: {
-          nixpkgs.overlays = [
-            (self: super: {
-              libgit2 = super.libgit2.overrideAttrs (oldAttrs: rec {
-                buildInputs = (oldAttrs.buildInputs or []) ++ [ super.zlib super.libssh2 super.pcre2 ];
-                cmakeFlags = (oldAttrs.cmakeFlags or []) ++ [
-                  "-DUSE_BUNDLED_ZLIB=OFF"
-                  "-DUSE_HTTP_PARSER=system"
-                  "-DUSE_SSH=ON"
-                  "-DREGEX_BACKEND=pcre2"
-                ];
-                CFLAGS = "${oldAttrs.CFLAGS or ""} -Wno-error=deprecated-non-prototype -Wno-error=macro-redefined";
-                CXXFLAGS = "${oldAttrs.CXXFLAGS or ""} -Wno-error=deprecated-non-prototype -Wno-error=macro-redefined";
-              });
-            })
-          ];
-        })
+#        # Add overlay for libgit2
+#        ({ pkgs, ... }: {
+#          nixpkgs.overlays = [
+#            (self: super: {
+#              libgit2 = super.libgit2.overrideAttrs (oldAttrs: rec {
+#                buildInputs = (oldAttrs.buildInputs or []) ++ [ super.zlib super.libssh2 super.pcre2 ];
+#                cmakeFlags = (oldAttrs.cmakeFlags or []) ++ [
+#                  "-DUSE_BUNDLED_ZLIB=OFF"
+#                  "-DUSE_HTTP_PARSER=system"
+#                  "-DUSE_SSH=ON"
+#                  "-DREGEX_BACKEND=pcre2"
+#                ];
+#                CFLAGS = "${oldAttrs.CFLAGS or ""} -Wno-error=deprecated-non-prototype -Wno-error=macro-redefined";
+#                CXXFLAGS = "${oldAttrs.CXXFLAGS or ""} -Wno-error=deprecated-non-prototype -Wno-error=macro-redefined";
+#              });
+#            })
+#          ];
+#        })
       ];
     };
 
