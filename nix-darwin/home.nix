@@ -53,6 +53,7 @@
     # '';
     #".zshrc".source = ../zshrc/.zshrc;
     ".config/alacritty".source = ../alacritty;
+    ".config/ghostty".source = ../ghostty;
     ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "/Users/bear/config-files/nvim";
     ".config/nix".source = ../nix;
     ".config/nix-darwin".source = ../nix-darwin;
