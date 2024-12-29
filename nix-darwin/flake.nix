@@ -58,7 +58,7 @@
           pkgs.yubikey-manager
           pkgs.zoom-us
           pkgs.zsh-autosuggestions
-         #pkgs.zsh-powerlevel10k
+          pkgs.zsh-powerlevel10k
           pkgs.zsh-syntax-highlighting
         ];
 
@@ -99,7 +99,7 @@
         ];
 
       # Enable powerlevel10k for zsh
-      #programs.zsh.promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
+      programs.zsh.promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
       # script from https://gist.github.com/elliottminns/211ef645ebd484eb9a5228570bb60ec3#file-nix-darwin-activation-nix to set up aliases instead of symlinks
       system.activationScripts.applications.text = let
         env = pkgs.buildEnv {
