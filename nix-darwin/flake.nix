@@ -39,6 +39,7 @@
 	  pkgs.ffmpeg
 	  pkgs.git
 	  pkgs.gh
+          pkgs.ghostty
 	  pkgs.gnupg
 	  pkgs.google-chrome
 	  pkgs.jq
@@ -72,7 +73,6 @@
           "1password-cli"
           "adobe-acrobat-pro"
           "anki"
-          "ghostty"
           "microsoft-office"
           "microsoft-teams"
 	  "orbstack"
@@ -167,7 +167,7 @@
 	dock.orientation = "left";
 	dock.persistent-apps = [
         # "${pkgs.alacritty}/Applications/Alacritty.app"
-          "/Applications/Ghostty.app/"
+        # "/Applications/Ghostty.app/"
 	  "/System/Applications/Calendar.app"
           "/System/Applications/System Settings.app"
           "/Applications/1Password.app/"
