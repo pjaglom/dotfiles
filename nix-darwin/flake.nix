@@ -166,7 +166,8 @@
         dock.minimize-to-application = true;
 	dock.orientation = "left";
 	dock.persistent-apps = [
-          "${pkgs.alacritty}/Applications/Alacritty.app"
+        # "${pkgs.alacritty}/Applications/Alacritty.app"
+          "/Applications/Ghostty.app/"
 	  "/System/Applications/Calendar.app"
           "/System/Applications/System Settings.app"
           "/Applications/1Password.app/"
