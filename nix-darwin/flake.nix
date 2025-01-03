@@ -78,6 +78,7 @@
 	  "orbstack"
 	  "orion"
           "tailscale"
+          "timemachineeditor"
           "visual-studio-code@insiders"
           "whatsapp"
 	];
