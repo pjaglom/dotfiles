@@ -8,28 +8,25 @@ clipboard-write = allow
 copy-on-select = true
 window-width = 100
 window-step-resize = true
-theme = Galaxy
-background = #1d2837
-selection-background = #b5d5ff
-selection-foreground = #000000
-cursor-color = #bbbbbb
+theme = tokyonight
+background = #000000
 cursor-style = block
-palette = 0=#000000
-palette = 1=#f9555f
-palette = 2=#21b089
-palette = 3=#fef02a
-palette = 4=#589df6
-palette = 5=#944d95
-palette = 6=#1f9ee7
-palette = 7=#bbbbbb
-palette = 8=#555555
-palette = 9=#fa8c8f
-palette = 10=#35bb9a
-palette = 11=#ffff55
-palette = 12=#589df6
-palette = 13=#e75699
-palette = 14=#3979bc
-palette = 15=#ffffff
+#palette = 0=#000000
+#palette = 1=#f9555f
+#palette = 2=#21b089
+#palette = 3=#fef02a
+#palette = 4=#589df6
+#palette = 5=#944d95
+#palette = 6=#1f9ee7
+#palette = 7=#bbbbbb
+#palette = 8=#555555
+#palette = 9=#fa8c8f
+#palette = 10=#35bb9a
+#palette = 11=#ffff55
+#palette = 12=#589df6
+#palette = 13=#e75699
+#palette = 14=#3979bc
+#palette = 15=#ffffff
 font-family = MesloLGS NF
 font-family-bold = MesloLGS NF
 font-family-italic = MesloLGS NF
@@ -37,4 +34,3 @@ font-family-bold-italic = MesloLGS NF
 font-size = 15
 window-height = 34
 window-width = 89
-theme = tokyonight
