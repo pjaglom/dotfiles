@@ -39,7 +39,7 @@
 	  pkgs.ffmpeg
 	  pkgs.git
 	  pkgs.gh
-          pkgs.ghostty
+          #pkgs.ghostty
 	  pkgs.gnupg
 	  pkgs.google-chrome
 	  pkgs.jq
@@ -74,6 +74,7 @@
           "1password-cli"
           "adobe-acrobat-pro"
           "anki"
+          "ghostty"
           "microsoft-office"
           "microsoft-teams"
 	  "orbstack"
