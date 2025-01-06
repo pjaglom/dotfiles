@@ -49,6 +49,7 @@
           pkgs.openssh
 	  pkgs.neovim
 	  pkgs.raycast
+          pkgs.rsync
           pkgs.signal-desktop
 	  pkgs.slack
         # pkgs.tailscale # commented because did not install desktop version
