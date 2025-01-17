@@ -167,7 +167,7 @@
 	dock.autohide-delay = 0.0;
 	dock.autohide-time-modifier = 0.0;
         dock.mineffect = "scale";
-        dock.minimize-to-application = true;
+        dock.minimize-to-application = false;
 	dock.orientation = "left";
 	dock.persistent-apps = [
         # "${pkgs.alacritty}/Applications/Alacritty.app"
