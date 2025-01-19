@@ -41,7 +41,7 @@
 	  pkgs.gh
           #pkgs.ghostty
 	  pkgs.gnupg
-	  pkgs.google-chrome
+	# pkgs.google-chrome # moved to brew
 	  pkgs.jq
           pkgs.libfido2
           pkgs.mkalias # have nix make aliases instead of symlinks for installed apps
@@ -50,7 +50,7 @@
 	  pkgs.neovim
 	  pkgs.raycast
           pkgs.rsync
-          pkgs.signal-desktop
+        # pkgs.signal-desktop # moved to brew for better upgrade supportability
 	  pkgs.slack
         # pkgs.tailscale # commented because did not install desktop version
           pkgs.tmux
@@ -76,6 +76,8 @@
           "adobe-acrobat-pro"
           "anki"
           "ghostty"
+          "gimp"
+          "google-chrome"
           "microsoft-office"
           "microsoft-teams"
 	  "orbstack"
