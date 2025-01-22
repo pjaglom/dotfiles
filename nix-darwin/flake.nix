@@ -90,7 +90,6 @@
 	masApps = {
 	  "FinalCutPro" = 424389933;
           "Kindle" = 302584613;
-          "LG Screen Manager" = 1142051783;
 	  "Remarkable" = 1276493162;
           "Things 3" = 904280696;
           "Yubico Authenticator" = 1497506650; # Never successfully installed; installed manually
