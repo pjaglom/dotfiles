@@ -128,7 +128,7 @@
           '';
 
       # Auto upgrade nix package and the daemon service.
-      services.nix-daemon.enable = true;
+      # services.nix-daemon.enable = true; # removed because no longer used per error message
       # nix.package = pkgs.nix;
 
       # Necessary for using flakes on this system.
@@ -160,8 +160,8 @@
       # Configure home-manager
       users.users.bear.home = "/Users/bear";
       #home-manager.backupFileExtension = "backup";
-      nix.configureBuildUsers = true;
-      nix.useDaemon = true;
+      # nix.configureBuildUsers = true; # removed because no longer used per error message
+      # nix.useDaemon = true; # removed because no longer used per error message
 
       # MacOS System Defaults
       system.defaults = {
