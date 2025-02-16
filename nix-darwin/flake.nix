@@ -84,6 +84,7 @@
 	  "orion"
           "tailscale"
           "timemachineeditor"
+          "tower"
           "visual-studio-code@insiders"
           "whatsapp"
 	];
