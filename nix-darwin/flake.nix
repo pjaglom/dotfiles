@@ -82,6 +82,7 @@
           "microsoft-teams"
 	  "orbstack"
 	  "orion"
+          "signal"
           "tailscale"
           "timemachineeditor"
           "tower"
