@@ -157,7 +157,7 @@
       #};
 
       # Enable sudo with touch id
-      security.pam.enableSudoTouchIdAuth = true;
+      security.pam.services.sudo_local.touchIdAuth = true;
 
       # Configure home-manager
       users.users.bear.home = "/Users/bear";
