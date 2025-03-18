@@ -67,6 +67,7 @@
       homebrew = {
         enable = true;
 	brews = [
+          "bear"
           "cmake"
           "cmake-docs"
           "gcc"
