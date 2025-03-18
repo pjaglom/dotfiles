@@ -131,7 +131,7 @@
       ols="ls";
       copilot="gh copilot";
       gcc="/opt/homebrew/bin/gcc-14";
-      g++="/opt/homebrew/bin/g++-14";
+      "g++"="/opt/homebrew/bin/g++-14";
       gcs="gh copilot suggest";
       gce="gh copilot explain";
       update-nix="nix flake update ~/config-files/dotfiles/nix-darwin#macbookpro-2024 --commit-lock-file";
