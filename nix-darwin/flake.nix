@@ -81,6 +81,8 @@
           "anki"
           "ghostty"
           "gimp"
+          "gitkraken"
+          "gitkraken-cli"
           "google-chrome"
           "microsoft-office"
           "microsoft-teams"
