@@ -58,7 +58,6 @@
 	  pkgs.wget
           pkgs.wireshark
           pkgs.yubikey-manager
-          pkgs.zoom-us
           pkgs.zsh-autosuggestions
           pkgs.zsh-powerlevel10k
           pkgs.zsh-syntax-highlighting
@@ -71,6 +70,7 @@
           "cmake"
           "cmake-docs"
           "gcc"
+          "googletest"
           "grip"
 	  "mas" # note: requires xcode-select, which I could not figure out how to install via nix
           "node"
@@ -95,6 +95,7 @@
           "tower"
           "visual-studio-code@insiders"
           "whatsapp"
+          "zoom"
 	];
 	masApps = {
 	  "FinalCutPro" = 424389933;
