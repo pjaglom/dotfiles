@@ -91,6 +91,7 @@
 	  "orbstack"
 	  "orion"
           "signal"
+          "superduper"
           "tailscale"
           "timemachineeditor"
           "tower"
