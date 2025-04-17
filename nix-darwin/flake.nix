@@ -87,6 +87,7 @@
           "google-chrome"
           "microsoft-office"
           "microsoft-teams"
+          "mullvadvpn"
 	  "orbstack"
 	  "orion"
           "signal"
