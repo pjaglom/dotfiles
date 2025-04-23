@@ -56,7 +56,7 @@
           pkgs.tmux
         #  pkgs.virtualbox
 	  pkgs.wget
-          pkgs.wireshark
+        #  pkgs.wireshark
           pkgs.yubikey-manager
           pkgs.zsh-autosuggestions
           pkgs.zsh-powerlevel10k
