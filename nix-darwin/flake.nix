@@ -56,7 +56,6 @@
           pkgs.tmux
         #  pkgs.virtualbox
 	  pkgs.wget
-        #  pkgs.wireshark
           pkgs.yubikey-manager
           pkgs.zsh-autosuggestions
           pkgs.zsh-powerlevel10k
@@ -74,6 +73,7 @@
           "grip"
 	  "mas" # note: requires xcode-select, which I could not figure out how to install via nix
           "node"
+          "wireshark"
 	];
 	casks = [
           "1password"
