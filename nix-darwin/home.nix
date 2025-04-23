@@ -94,7 +94,7 @@
   # zsh options
   programs.zsh = {
     enable = true;
-    initExtra = ''
+    initContent = ''
       bindkey -v
     '';
     syntaxHighlighting.enable = true;
