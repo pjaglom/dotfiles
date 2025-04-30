@@ -154,6 +154,8 @@
       environment = {
         shellInit = ''
           export PATH="/run/current-system/sw/bin:$PATH"
+          export CC=/opt/homebrew/bin/gcc-14
+          export CXX=/opt/homebrew/bin/g++-14
         '';
       };
 
