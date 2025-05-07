@@ -80,6 +80,7 @@
           "1password-cli"
           "adobe-acrobat-pro"
           "anki"
+          "claude"
           "cursor"
           "ghostty"
           "gimp"
