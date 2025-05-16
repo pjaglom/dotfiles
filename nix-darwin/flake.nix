@@ -77,6 +77,7 @@
           "node"
           "virtualenv"
           "wireshark"
+          "yt-dlp"
 	];
 	casks = [
           "1password"
