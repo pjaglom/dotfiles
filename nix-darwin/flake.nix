@@ -74,7 +74,7 @@
           "grip"
 	  "mas" # note: requires xcode-select, which I could not figure out how to install via nix
           "pyenv"
-          "node"
+          "tlrc"
           "virtualenv"
           "wireshark"
           "yt-dlp"
