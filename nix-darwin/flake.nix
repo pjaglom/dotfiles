@@ -94,6 +94,7 @@
           "mullvadvpn"
 	  "orbstack"
 	  "orion"
+          "pycharm"
           "signal"
           "superduper"
           "tailscale"
