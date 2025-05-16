@@ -88,6 +88,7 @@
           "gitkraken"
           "gitkraken-cli"
           "google-chrome"
+          "jupyterlab"
           "microsoft-office"
           "microsoft-teams"
           "mullvadvpn"
