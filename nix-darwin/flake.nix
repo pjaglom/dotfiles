@@ -298,6 +298,9 @@
 	  home-manager.useUserPackages = true;
 	  home-manager.users.bear = import ./home.nix;
 	}
+        {
+          system.primaryUser = "bear";
+        }
 #        # Add overlay for libgit2
 #        ({ pkgs, ... }: {
 #          nixpkgs.overlays = [
