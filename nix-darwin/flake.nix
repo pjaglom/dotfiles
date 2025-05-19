@@ -95,6 +95,7 @@
           "microsoft-office"
           "microsoft-teams"
           "mullvadvpn"
+          "obsidian"
 	  "orbstack"
 	  "orion"
           "pycharm"
