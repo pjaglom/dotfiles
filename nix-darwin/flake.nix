@@ -87,6 +87,7 @@
           "anki"
           "claude"
           "cursor"
+          "firefox"
           "ghostty"
           "gimp"
           "gitkraken"
