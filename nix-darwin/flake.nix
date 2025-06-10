@@ -26,9 +26,9 @@
   let
     configuration = { pkgs, config, ... }: {
 
-      nix.settings = {
-          trusted-users = [ "root" "bear" ];
-      };
+        #nix.settings = {
+        #    trusted-users = [ "root" "bear" ];
+        #};
       nixpkgs.config.allowUnfree = true; # allow installation of unfree/paid apps
 
       # List packages installed in system profile. To search by name, run:
@@ -96,12 +96,12 @@
           "ghostty"
           "gimp"
           "gitkraken"
-          "gitkraken-cli"
+            #"gitkraken-cli"
           "google-chrome"
           "jupyterlab"
           "microsoft-office"
           "microsoft-teams"
-          "mullvadvpn"
+          "mullvad-vpn"
           "obsidian"
 	  "orbstack"
 	  "orion"
@@ -277,6 +277,9 @@
     # $ darwin-rebuild build --flake .#macbookpro-2024
     darwinConfigurations."macbookpro-2024" = nix-darwin.lib.darwinSystem {
       modules = [ 
+        ({ config, ... }: {
+          homebrew.taps = builtins.attrNames config.nix-homebrew.taps;
+        })
         configuration
         nix-homebrew.darwinModules.nix-homebrew
         {
@@ -299,7 +302,7 @@
             # Optional: Enable fully-declarative tap management
             #
             # With mutableTaps disabled, taps can no longer be added imperatively with `brew tap`.
-            mutableTaps = true;
+            mutableTaps = false;
           };
         }
 	home-manager.darwinModules.home-manager {
