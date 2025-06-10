@@ -96,7 +96,7 @@
           "ghostty"
           "gimp"
           "gitkraken"
-            #"gitkraken-cli"
+          "gitkraken-cli"
           "google-chrome"
           "jupyterlab"
           "microsoft-office"
