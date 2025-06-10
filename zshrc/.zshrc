@@ -136,7 +136,8 @@ alias copilot="gh copilot"
 alias gcs="gh copilot suggest"
 alias gce="gh copilot explain"
 alias update-nix="nix flake update --commit-lock-file"
-alias switch-nix="darwin-rebuild switch --flake ~/config-files/dotfiles/nix-darwin#macbookpro-2024"
+alias switch-nix="sudo darwin-rebuild switch --flake ~/config-files/dotfiles/nix-darwin#macbookpro-2024"
+alias dt="! args=$@; shift $#; nvim -c \"DiffviewOpen $args\""
 
 # set CC and CXX to homebrew-installed version
 export CC=/opt/homebrew/bin/gcc-14
