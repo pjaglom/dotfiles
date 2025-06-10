@@ -26,6 +26,9 @@
   let
     configuration = { pkgs, config, ... }: {
 
+      nix.settings = {
+          trusted-users = [ "root" "bear" ];
+      };
       nixpkgs.config.allowUnfree = true; # allow installation of unfree/paid apps
 
       # List packages installed in system profile. To search by name, run:

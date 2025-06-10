@@ -135,7 +135,8 @@
       gcs="gh copilot suggest";
       gce="gh copilot explain";
       update-nix="nix flake update ~/config-files/dotfiles/nix-darwin#macbookpro-2024 --commit-lock-file";
-      switch-nix="darwin-rebuild switch --flake ~/config-files/dotfiles/nix-darwin#macbookpro-2024";
+      switch-nix="sudo darwin-rebuild switch --flake ~/config-files/dotfiles/nix-darwin#macbookpro-2024";
+      dt="! args=$@; shift $#; nvim -c \"DiffviewOpen $args\"";
     };
     #theme = "powerlevel10k/powerlevel10k";
   };
