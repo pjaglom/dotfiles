@@ -92,6 +92,7 @@
           "anki"
           "claude"
           "cursor"
+          "dropbox"
           "firefox"
           "ghostty"
           "gimp"
