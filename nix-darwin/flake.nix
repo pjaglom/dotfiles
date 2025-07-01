@@ -90,6 +90,8 @@
           "1password-cli"
           "adobe-acrobat-pro"
           "anki"
+          "balenaetcher"
+          "carbon-copy-cloner"
           "claude"
           "cursor"
           "dropbox"
