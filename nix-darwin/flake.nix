@@ -73,6 +73,7 @@
           "cmake"
           "cmake-docs"
           "gcc"
+          "get_iplayer"
           "googletest"
           "graphviz"
           "grip"
