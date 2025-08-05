@@ -39,7 +39,6 @@
 	  pkgs.colorls
 	  pkgs.curl
           pkgs.discord
-	  pkgs.ffmpeg
 	  pkgs.git
 	  pkgs.gh
           #pkgs.ghostty
@@ -72,6 +71,7 @@
           "bear"
           "cmake"
           "cmake-docs"
+          "ffmpeg"
           "gcc"
           "get_iplayer"
           "googletest"
