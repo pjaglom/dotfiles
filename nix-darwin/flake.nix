@@ -77,6 +77,7 @@
           "googletest"
           "graphviz"
           "grip"
+          "markdownlint-cli"
 	  "mas" # note: requires xcode-select, which I could not figure out how to install via nix
           "minio-mc"
           "pyenv"
