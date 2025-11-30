@@ -80,6 +80,8 @@
   # if you don't want to manage your shell through Home Manager.
   home.sessionVariables = {
     EDITOR = "nvim";
+    CC = "/opt/homebrew/bin/gcc-14";
+    CXX = "/opt/homebrew/bin/g++-14";
   };
 
 # Not entirely sure what this does. Need to investigate. Source: https://github.com/omerxx/dotfiles/blob/master/nix-darwin/home.nix
@@ -95,8 +97,21 @@
   # zsh options
   programs.zsh = {
     enable = true;
+    defaultKeymap = "viins";
     initContent = ''
       bindkey -v
+
+      # Pyenv Init
+      if command -v pyenv > /dev/null; then
+        export PYENV_ROOT="$HOME/.pyenv"
+        [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+        eval "$(pyenv init -)"
+      fi
+
+      # Pyenv Virtualenv Init
+      if command -v pyenv-virtualenv-init > /dev/null; then
+        eval "$(pyenv virtualenv-init -)"
+      fi
     '';
     syntaxHighlighting.enable = true;
     autosuggestion.enable = true;
@@ -141,6 +156,7 @@
     };
     #theme = "powerlevel10k/powerlevel10k";
   };
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }
