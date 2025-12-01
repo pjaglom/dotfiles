@@ -73,6 +73,7 @@
           "cmake-docs"
           "ffmpeg"
           "gcc"
+          "gdb"
           "get_iplayer"
           "googletest"
           "graphviz"
