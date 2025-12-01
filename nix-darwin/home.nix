@@ -80,8 +80,8 @@
   # if you don't want to manage your shell through Home Manager.
   home.sessionVariables = {
     EDITOR = "nvim";
-    CC = "/opt/homebrew/bin/gcc-14";
-    CXX = "/opt/homebrew/bin/g++-14";
+    CC = "/opt/homebrew/bin/gcc-15";
+    CXX = "/opt/homebrew/bin/g++-15";
   };
 
 # Not entirely sure what this does. Need to investigate. Source: https://github.com/omerxx/dotfiles/blob/master/nix-darwin/home.nix
