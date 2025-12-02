@@ -66,6 +66,9 @@
 
       homebrew = {
         enable = true;
+        taps = [
+          "pwndbg/tap"
+        ];
 	brews = [
           "act"
           "bear"
@@ -73,7 +76,7 @@
           "cmake-docs"
           "ffmpeg"
           "gcc"
-          "gdb"
+          "pwndbg/tap/pwndbg-lldb"
           "get_iplayer"
           "googletest"
           "graphviz"
