@@ -72,6 +72,7 @@
 	brews = [
           "act"
           "bear"
+          "boost"
           "cmake"
           "cmake-docs"
           "ffmpeg"
@@ -100,6 +101,7 @@
           "carbon-copy-cloner"
           "claude"
           "cursor"
+          "cyberduck"
           "dropbox"
           "firefox"
           "ghostty"

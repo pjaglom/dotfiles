@@ -112,6 +112,11 @@
       if command -v pyenv-virtualenv-init > /dev/null; then
         eval "$(pyenv virtualenv-init -)"
       fi
+
+      # Gemini AI API key (and for future use)
+      if [ -f "$HOME/.secrets.sh" ]; then
+      source "$HOME/.secrets.sh"
+      fi
     '';
     syntaxHighlighting.enable = true;
     autosuggestion.enable = true;
