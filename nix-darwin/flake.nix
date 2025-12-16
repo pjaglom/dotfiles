@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     nix-darwin.url = "github:LnL7/nix-darwin";
+    pwndbg.url = "github:pwndbg/pwndbg"
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
     home-manager = {
@@ -34,7 +35,8 @@
       # List packages installed in system profile. To search by name, run:
       # $ nix-env -qaP | grep wget
       environment.systemPackages =
-	[ pkgs.alacritty
+	[ inputs.pwndbg.packages.${pkgs.system}.pwndbg-lldb
+          pkgs.alacritty
           pkgs.atuin
 	  pkgs.colorls
 	  pkgs.curl
@@ -66,9 +68,9 @@
 
       homebrew = {
         enable = true;
-        taps = [
-          "pwndbg/tap"
-        ];
+          # taps = [
+          #   "pwndbg/tap"
+          # ];
 	brews = [
           "act"
           "bear"
@@ -77,7 +79,7 @@
           "cmake-docs"
           "ffmpeg"
           "gcc"
-          "pwndbg/tap/pwndbg-lldb"
+          # "pwndbg/tap/pwndbg-lldb" # couldn't get this to work right
           "get_iplayer"
           "googletest"
           "graphviz"
@@ -85,6 +87,7 @@
           "markdownlint-cli"
 	  "mas" # note: requires xcode-select, which I could not figure out how to install via nix
           "minio-mc"
+          "ollama"
           "pyenv"
           "pyenv-virtualenv"
           "tlrc"
