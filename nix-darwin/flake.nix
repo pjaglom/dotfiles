@@ -4,7 +4,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     nix-darwin.url = "github:LnL7/nix-darwin";
-    pwndbg.url = "github:pwndbg/pwndbg"
+    pwndbg.url = "github:pwndbg/pwndbg";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
     home-manager = {
@@ -23,7 +23,7 @@
     };
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew, homebrew-core, homebrew-cask, home-manager }:
+  outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew, homebrew-core, homebrew-cask, home-manager, pwndbg, ... }:
   let
     configuration = { pkgs, config, ... }: {
 
@@ -35,7 +35,7 @@
       # List packages installed in system profile. To search by name, run:
       # $ nix-env -qaP | grep wget
       environment.systemPackages =
-	[ inputs.pwndbg.packages.${pkgs.system}.pwndbg-lldb
+	[ inputs.pwndbg.packages.${pkgs.stdenv.hostPlatform.system}.pwndbg-lldb
           pkgs.alacritty
           pkgs.atuin
 	  pkgs.colorls
@@ -90,6 +90,7 @@
           "ollama"
           "pyenv"
           "pyenv-virtualenv"
+          "sqlite"
           "tlrc"
           "virtualenv"
           "wireshark"
@@ -98,6 +99,7 @@
 	casks = [
           "1password"
           "1password-cli"
+          "actual"
           "adobe-acrobat-pro"
           "anki"
           "balenaetcher"
