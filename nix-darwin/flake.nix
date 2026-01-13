@@ -56,7 +56,6 @@
           pkgs.rsync
         # pkgs.signal-desktop # moved to brew for better upgrade supportability
 	  pkgs.slack
-        # pkgs.tailscale # commented because did not install desktop version
           pkgs.tmux
         #  pkgs.virtualbox
 	  pkgs.wget
@@ -77,6 +76,8 @@
           "boost"
           "cmake"
           "cmake-docs"
+          "copilot"
+          "coreutils"
           "ffmpeg"
           "gcc"
           # "pwndbg/tap/pwndbg-lldb" # couldn't get this to work right
@@ -88,6 +89,7 @@
 	  "mas" # note: requires xcode-select, which I could not figure out how to install via nix
           "minio-mc"
           "ollama"
+          "opencode"
           "pyenv"
           "pyenv-virtualenv"
           "sqlite"
@@ -122,6 +124,7 @@
 	  "orbstack"
 	  "orion"
           "pycharm"
+          "raspberri-pi-imager"
           "signal"
           "superduper"
           "tailscale-app"
@@ -318,7 +321,7 @@
             # Optional: Enable fully-declarative tap management
             #
             # With mutableTaps disabled, taps can no longer be added imperatively with `brew tap`.
-            mutableTaps = false;
+            mutableTaps = true;
           };
         }
 	home-manager.darwinModules.home-manager {
