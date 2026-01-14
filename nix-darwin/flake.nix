@@ -124,7 +124,7 @@
 	  "orbstack"
 	  "orion"
           "pycharm"
-          "raspberri-pi-imager"
+          "raspberry-pi-imager"
           "signal"
           "superduper"
           "tailscale-app"
@@ -132,6 +132,7 @@
           "tower"
           "visual-studio-code@insiders"
           "whatsapp"
+          "xquartz"
           "zoom"
 	];
 	masApps = {
