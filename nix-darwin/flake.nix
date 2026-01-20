@@ -130,8 +130,10 @@
           "tailscale-app"
           "timemachineeditor"
           "tower"
+          "utm"
           "visual-studio-code@insiders"
           "whatsapp"
+          "wireshark"
           "xquartz"
           "zoom"
 	];
