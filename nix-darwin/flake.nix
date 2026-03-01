@@ -86,9 +86,11 @@
           "graphviz"
           "grip"
           "lima"
+          "lima-additional-guestagents"
           "markdownlint-cli"
 	  "mas" # note: requires xcode-select, which I could not figure out how to install via nix
           "minio-mc"
+          "nmap"
           "ollama"
           "opencode"
           "pyenv"
@@ -108,6 +110,7 @@
           "balenaetcher"
           "carbon-copy-cloner"
           "claude"
+          "claude-code"
           "cursor"
           "cyberduck"
           "dropbox"
@@ -327,6 +330,9 @@
             # With mutableTaps disabled, taps can no longer be added imperatively with `brew tap`.
             mutableTaps = true;
           };
+        }
+        {
+          environment.systemPath = [ "/opt/homebrew/bin" "/opt/homebrew/sbin" ];
         }
 	home-manager.darwinModules.home-manager {
           home-manager.useGlobalPkgs = true;
