@@ -78,6 +78,7 @@
           "cmake-docs"
           "copilot"
           "coreutils"
+          "dotnet@10"
           "ffmpeg"
           "gcc"
           # "pwndbg/tap/pwndbg-lldb" # couldn't get this to work right
@@ -107,6 +108,7 @@
           "actual"
           "adobe-acrobat-pro"
           "anki"
+          "microsoft-azure-storage-explorer"
           "balenaetcher"
           "carbon-copy-cloner"
           "claude"
@@ -139,7 +141,7 @@
           "utm"
           "visual-studio-code@insiders"
           "whatsapp"
-          "wireshark"
+          "wireshark-app"
           "xquartz"
           "zoom"
 	];
