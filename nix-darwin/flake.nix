@@ -69,6 +69,7 @@
         enable = true;
           # taps = [
           #   "pwndbg/tap"
+          #   "anomalyco/tap"
           # ];
 	brews = [
           "act"
@@ -82,6 +83,7 @@
           "ffmpeg"
           "gcc"
           # "pwndbg/tap/pwndbg-lldb" # couldn't get this to work right
+          "gemini-cli"
           "get_iplayer"
           "googletest"
           "graphviz"
@@ -93,11 +95,11 @@
           "minio-mc"
           "nmap"
           "ollama"
-          "opencode"
           "pyenv"
           "pyenv-virtualenv"
           "sqlite"
           "tlrc"
+          "tree-sitter-cli"
           "virtualenv"
           "wireshark"
           "yt-dlp"
@@ -111,6 +113,7 @@
           "microsoft-azure-storage-explorer"
           "balenaetcher"
           "carbon-copy-cloner"
+          "citrix-workspace"
           "claude"
           "claude-code"
           "cursor"
@@ -122,6 +125,8 @@
           "gitkraken"
           "gitkraken-cli"
           "google-chrome"
+          "granola"
+          "home-assistant"
           "jupyterlab-app"
           "karabiner-elements"
           "microsoft-office"
@@ -132,6 +137,7 @@
 	  "orion"
           "pycharm"
           "raspberry-pi-imager"
+          "rustrover"
           "signal"
           "superduper"
           "tailscale-app"
