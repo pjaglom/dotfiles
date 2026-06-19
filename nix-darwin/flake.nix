@@ -126,6 +126,7 @@
           "gitkraken-cli"
           "google-chrome"
           "granola"
+          "hey-desktop"
           "home-assistant"
           "jupyterlab-app"
           "karabiner-elements"
