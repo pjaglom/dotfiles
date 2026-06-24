@@ -101,6 +101,7 @@
           "tlrc"
           "tree-sitter-cli"
           "virtualenv"
+          "watch"
           "wireshark"
           "yt-dlp"
 	];
