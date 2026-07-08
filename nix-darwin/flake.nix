@@ -151,6 +151,7 @@
           "whatsapp"
           "wireshark-app"
           "xquartz"
+          "zed"
           "zoom"
 	];
 	masApps = {
@@ -305,6 +306,8 @@
       # Used for backwards compatibility, please read the changelog before changing.
       # $ darwin-rebuild changelog
       system.stateVersion = 5;
+      documentation.doc.enable = false;
+      system.tools.darwin-uninstaller.enable = false;
 
       # The platform the configuration will be used on.
       nixpkgs.hostPlatform = "aarch64-darwin";
