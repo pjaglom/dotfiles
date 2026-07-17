@@ -111,6 +111,7 @@
           "actual"
           "adobe-acrobat-pro"
           "anki"
+          "antigravity"
           "microsoft-azure-storage-explorer"
           "balenaetcher"
           "carbon-copy-cloner"
