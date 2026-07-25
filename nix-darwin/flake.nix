@@ -25,7 +25,40 @@
 
   outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew, homebrew-core, homebrew-cask, home-manager, pwndbg, ... }:
   let
-    configuration = { pkgs, config, ... }: {
+    configuration = { pkgs, config, ... }:
+    let
+      # Mac App Store apps — declared here for self-documentation, installed
+      # via the per-user LaunchAgent below so mas runs in your App Store
+      # session instead of as root during activation.
+      masApps = {
+        "Final Cut Pro"        = 424389933;
+        "Kindle"               = 302584613;
+        "Obsidian Web Clipper" = 6720708363;
+        "Remarkable"           = 1276493162;
+        "Things 3"             = 904280696;
+        "Yubico Authenticator" = 1497506650;
+      };
+      masBin = "/opt/homebrew/bin/mas";  # brew's mas 6.x; or "${pkgs.mas}/bin/mas"
+      masInstallScript = pkgs.writeShellScript "mas-install-apps" ''
+        set -u
+        MAS=${masBin}
+        if [ ! -x "$MAS" ]; then
+          echo "mas not found at $MAS (is the 'mas' brew installed?)" >&2
+          exit 0
+        fi
+        installed="$("$MAS" list 2>/dev/null | awk '{print $1}')"
+        ensure() {
+          if printf '%s\n' "$installed" | grep -qx "$1"; then
+            echo "ok: $2 ($1)"
+          else
+            echo "installing: $2 ($1)"
+            "$MAS" install "$1" || "$MAS" get "$1" || echo "FAILED: $2 ($1)" >&2
+          fi
+        }
+        ${pkgs.lib.concatStringsSep "\n        " (pkgs.lib.mapAttrsToList
+          (name: id: "ensure ${toString id} ${pkgs.lib.escapeShellArg name}") masApps)}
+      '';
+    in {
 
         #nix.settings = {
         #    trusted-users = [ "root" "bear" ];
@@ -79,7 +112,7 @@
           "cmake-docs"
           "copilot"
           "coreutils"
-          "dotnet@10"
+          "dotnet"
           "ffmpeg"
           "gcc"
           # "pwndbg/tap/pwndbg-lldb" # couldn't get this to work right
@@ -112,6 +145,7 @@
           "adobe-acrobat-pro"
           "anki"
           "antigravity"
+          "antigravity-ide"
           "microsoft-azure-storage-explorer"
           "balenaetcher"
           "carbon-copy-cloner"
@@ -155,14 +189,6 @@
           "zed"
           "zoom"
 	];
-	masApps = {
-	  "FinalCutPro" = 424389933;
-          "Kindle" = 302584613;
-          "Obsidian Web Clipper" = 6720708363;
-	  "Remarkable" = 1276493162;
-          "Things 3" = 904280696;
-          "Yubico Authenticator" = 1497506650; # Never successfully installed; installed manually
-	};
 	onActivation.cleanup = "zap";
 	onActivation.autoUpdate = true;
 	onActivation.upgrade = true;
@@ -230,7 +256,7 @@
 
       # Configure home-manager
       users.users.bear.home = "/Users/bear";
-      #home-manager.backupFileExtension = "backup";
+      home-manager.backupFileExtension = "backup";
       # nix.configureBuildUsers = true; # removed because no longer used per error message
       # nix.useDaemon = true; # removed because no longer used per error message
 
@@ -308,7 +334,21 @@
       # $ darwin-rebuild changelog
       system.stateVersion = 5;
       documentation.doc.enable = false;
-      system.tools.darwin-uninstaller.enable = false;
+
+      # Install declared Mac App Store apps on EVERY switch, in the logged-in
+      # user's App Store session. Activation runs as root, which mas can't use,
+      # so we hop into the user's GUI session with `launchctl asuser` + `sudo -u`.
+      system.activationScripts.postActivation.text = ''
+        masUser="bear"   # or: ${config.system.primaryUser}
+        consoleUser="$(/usr/bin/stat -f '%Su' /dev/console 2>/dev/null || true)"
+        if [ "$consoleUser" = "$masUser" ]; then
+          uid="$(/usr/bin/id -u "$masUser")"
+          echo "Installing declared Mac App Store apps as $masUser..." >&2
+          /bin/launchctl asuser "$uid" /usr/bin/sudo -u "$masUser" ${masInstallScript} || true
+        else
+          echo "Skipping mas install: '$masUser' is not the console user (logged in: '$consoleUser')." >&2
+        fi
+      '';
 
       # The platform the configuration will be used on.
       nixpkgs.hostPlatform = "aarch64-darwin";
