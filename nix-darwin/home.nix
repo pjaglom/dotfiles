@@ -155,6 +155,8 @@
       update-nix="nix flake update ~/config-files/dotfiles/nix-darwin#macbookpro-2024 --commit-lock-file";
       switch-nix="sudo darwin-rebuild switch --flake ~/config-files/dotfiles/nix-darwin#macbookpro-2024";
       dt="! args=$@; shift $#; nvim -c \"DiffviewOpen $args\"";
+      ndof="CLAUDE_CONFIG_DIR=$HOME/.claude CLAUDE_CODE_PROJECT_DIR_NAME=ndof claude";
+      ndofcode = "CLAUDE_CONFIG_DIR=$HOME/.claude CLAUDE_CODE_PROJECT_DIR_NAME=ndof code /Users/bear/src/peter/bob";
     };
     #theme = "powerlevel10k/powerlevel10k";
   };
