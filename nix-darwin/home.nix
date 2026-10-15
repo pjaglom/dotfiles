@@ -117,6 +117,16 @@
       if [ -f "$HOME/.secrets.sh" ]; then
       source "$HOME/.secrets.sh"
       fi
+      # ndofcode [subdir]: open VS Code Insiders on a repo under bob/ (or bob/ itself),
+      # with the Claude Code project hub pinned to "ndof" regardless of which repo.
+      ndofcode() {
+        local dir="/Users/bear/src/peter/bob/''${1:-}"
+        [[ -d "$dir" ]] || { echo "ndofcode: no such directory: $dir" >&2; return 1; }
+        local target="$dir"
+        [[ -f "$dir/ndof.code-workspace" ]] && target="$dir/ndof.code-workspace"
+        CLAUDE_CONFIG_DIR="$HOME/.claude" CLAUDE_CODE_PROJECT_DIR_NAME=ndof code-insiders "$target"
+      }
+      compdef '_files -W /Users/bear/src/peter/bob -/' ndofcode
     '';
     syntaxHighlighting.enable = true;
     autosuggestion.enable = true;
@@ -156,7 +166,7 @@
       switch-nix="sudo darwin-rebuild switch --flake ~/config-files/dotfiles/nix-darwin#macbookpro-2024";
       dt="! args=$@; shift $#; nvim -c \"DiffviewOpen $args\"";
       ndof="CLAUDE_CONFIG_DIR=$HOME/.claude CLAUDE_CODE_PROJECT_DIR_NAME=ndof claude";
-      ndofcode = "CLAUDE_CONFIG_DIR=$HOME/.claude CLAUDE_CODE_PROJECT_DIR_NAME=ndof code /Users/bear/src/peter/bob";
+      #ndofcode = "CLAUDE_CONFIG_DIR=$HOME/.claude CLAUDE_CODE_PROJECT_DIR_NAME=ndof code-insiders /Users/bear/src/peter/bob";
     };
     #theme = "powerlevel10k/powerlevel10k";
   };

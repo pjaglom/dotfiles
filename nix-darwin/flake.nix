@@ -6,10 +6,19 @@
     nix-darwin.url = "github:LnL7/nix-darwin";
     pwndbg.url = "github:pwndbg/pwndbg";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
-    nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # Homebrew itself — pinned to a release tag; bump this when homebrew-core outruns it
+    brew-src = {
+      url = "github:Homebrew/brew/7.0.9";
+      flake = false;
+    };
+    nix-homebrew = {
+      url = "github:zhaofengli/nix-homebrew";
+      inputs.brew-src.follows = "brew-src";
     };
 
     # Optional: Declarative tap management
@@ -22,7 +31,6 @@
       flake = false;
     };
   };
-
   outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew, homebrew-core, homebrew-cask, home-manager, pwndbg, ... }:
   let
     configuration = { pkgs, config, ... }:
@@ -96,6 +104,11 @@
           pkgs.zsh-autosuggestions
           pkgs.zsh-powerlevel10k
           pkgs.zsh-syntax-highlighting
+          # For NSA codebreaker challenge:
+          pkgs.volatility3
+          pkgs.p7zip
+          pkgs.binutils
+          pkgs.yara
         ];
 
       homebrew = {
@@ -118,6 +131,7 @@
           # "pwndbg/tap/pwndbg-lldb" # couldn't get this to work right
           "gemini-cli"
           "get_iplayer"
+          "ghidra"
           "googletest"
           "graphviz"
           "grip"
@@ -131,6 +145,8 @@
           "picocom"
           "pyenv"
           "pyenv-virtualenv"
+          "qemu"
+          "rclone"
           "sevenzip"
           "sqlite"
           "telnet"
@@ -181,6 +197,7 @@
           "superduper"
           "tailscale-app"
           "telegram"
+          "tigervnc"
           "timemachineeditor"
           "tower"
           "utm"
@@ -386,7 +403,7 @@
             # Optional: Enable fully-declarative tap management
             #
             # With mutableTaps disabled, taps can no longer be added imperatively with `brew tap`.
-            mutableTaps = true;
+            mutableTaps = false;
           };
         }
         {
