@@ -109,6 +109,7 @@
           pkgs.p7zip
           pkgs.binutils
           pkgs.yara
+          pkgs.upx
         ];
 
       homebrew = {
@@ -199,6 +200,7 @@
           "telegram"
           "tigervnc"
           "timemachineeditor"
+          "tor-browser"
           "tower"
           "utm"
           "visual-studio-code@insiders"
