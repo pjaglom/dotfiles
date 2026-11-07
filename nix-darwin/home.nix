@@ -79,6 +79,7 @@
   #
   # if you don't want to manage your shell through Home Manager.
   home.sessionVariables = {
+    AWS_PROFILE = "spoilersafe";
     EDITOR = "nvim";
     CC = "/opt/homebrew/bin/gcc-15";
     CXX = "/opt/homebrew/bin/g++-15";

@@ -44,6 +44,7 @@
         "Obsidian Web Clipper" = 6720708363;
         "Remarkable"           = 1276493162;
         "Things 3"             = 904280696;
+        "Xcode"                = 497799835;
         "Yubico Authenticator" = 1497506650;
       };
       masBin = "/opt/homebrew/bin/mas";  # brew's mas 6.x; or "${pkgs.mas}/bin/mas"
@@ -90,6 +91,8 @@
 	  pkgs.jq
           pkgs.libfido2
           pkgs.mkalias # have nix make aliases instead of symlinks for installed apps
+	  pkgs.nodejs_22
+	  (pkgs.pnpm_10.override { nodejs = pkgs.nodejs_22; })
           pkgs.oh-my-zsh
           pkgs.openssh
 	  pkgs.neovim
@@ -97,6 +100,7 @@
           pkgs.rsync
         # pkgs.signal-desktop # moved to brew for better upgrade supportability
 	  pkgs.slack
+          pkgs.terraform
           pkgs.tmux
         #  pkgs.virtualbox
 	  pkgs.wget
@@ -120,6 +124,7 @@
           # ];
 	brews = [
           "act"
+          "awscli"
           "bear"
           "boost"
           "cmake"
@@ -127,6 +132,7 @@
           "copilot"
           "coreutils"
           "dotnet"
+          "fastlane"
           "ffmpeg"
           "gcc"
           # "pwndbg/tap/pwndbg-lldb" # couldn't get this to work right
