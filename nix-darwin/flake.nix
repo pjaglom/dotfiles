@@ -156,6 +156,7 @@
           "rclone"
           "sevenzip"
           "sqlite"
+          "swiftlint"
           "telnet"
           "tlrc"
           "tree-sitter-cli"
