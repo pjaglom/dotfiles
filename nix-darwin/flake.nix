@@ -99,6 +99,7 @@
 	  pkgs.raycast
           pkgs.rsync
         # pkgs.signal-desktop # moved to brew for better upgrade supportability
+          pkgs.ssm-session-manager-plugin
 	  pkgs.slack
           pkgs.terraform
           pkgs.tmux
