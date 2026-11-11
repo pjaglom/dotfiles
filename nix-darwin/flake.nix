@@ -105,6 +105,7 @@
           pkgs.tmux
         #  pkgs.virtualbox
 	  pkgs.wget
+          pkgs.xcodes
           pkgs.yubikey-manager
           pkgs.zsh-autosuggestions
           pkgs.zsh-powerlevel10k
